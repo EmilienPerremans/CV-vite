@@ -1,0 +1,27 @@
+html
+{
+  background-color: grey  ;
+}
+
+.presentation {
+  display: flex;
+}
+
+.photo {
+  flex: 1 1 auto;
+}
+
+.nom {
+  flex: 1 1 auto;
+}
+
+.adresse {
+  flex: 1 1 auto;
+}
+
+
+#photo_cv
+{
+  width: 200px;
+  height: auto;
+}
