@@ -1,4 +1,16 @@
-import "./style.css";
+import { renderNav } from './components/nav.js';
+import { renderFooter } from './components/footer.js';
+import { renderCard } from './components/card.js';
+import './style.css';
+import users from './cv.json';
 
-// document.querySelector("#app").innerHTML = `
-//   <h1>Nicos t'es une salope regarde le cours</h1>`;
+
+const app = document.getElementById('app');
+
+app.innerHTML = `
+  ${renderNav()}
+  <div id="cards-container"></div>
+  ${renderFooter()}
+`;
+
+document.getElementById('cards-container').innerHTML = users.map(user => renderCard(user)).join('');
